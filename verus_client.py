@@ -525,13 +525,13 @@ class VerusClient:
         response = self._rpc_request("getcurrencystate", params)
         return self._handle_response(response)
 
-#    def getcurrencyconverters(self):
-#TODO: add overloaded options
-#        """
-#        Returns a list of available currency converters.
-#        """
-#        response = self._rpc_request("getcurrencyconverters", [])
-#        return self._handle_response(response)
+    def getcurrencyconverters(self, currency1, currency2):
+        """
+        Returns a list of available currency converters.
+        """
+        #TODO: add overloaded options
+        response = self._rpc_request("getcurrencyconverters", [currency1, currency2])
+        return self._handle_response(response)
 
     def getimports(self, currency, heightstart=None, heightend=None):
         """
